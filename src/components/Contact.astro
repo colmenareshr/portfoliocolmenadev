@@ -1,0 +1,75 @@
+---
+const email = "colmenareshr@gmail.com";
+const subject = encodeURIComponent("Trabajemos juntos Humberto");
+const emailServiceURL = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}`;
+---
+
+<div class="flex items-center justify-center">
+  <input
+    id="emailInput"
+    type="email"
+    value={email}
+    readonly
+    class="rounded-s-lg border border-gray-300 bg-slate-900 p-1 text-sm focus:border-blue-500 focus:outline-none cursor-pointer"
+  />
+  <button
+    id="copyButton"
+    class="rounded-e-lg border bg-slate-200 p-1 text-slate-900 hover:bg-slate-200 hover:text-slate-900 focus:outline-none"
+  >
+    <svg
+      class="icon icon-tabler icon-tabler-clipboard-copy"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="#2c3e50"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path
+        d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h3m9 -9v-5a2 2 0 0 0 -2 -2h-2"
+      ></path>
+      <path
+        d="M13 17v-1a1 1 0 0 1 1 -1h1m3 0h1a1 1 0 0 1 1 1v1m0 3v1a1 1 0 0 1 -1 1h-1m-3 0h-1a1 1 0 0 1 -1 -1v-1"
+      ></path>
+      <path
+        d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"
+      ></path>
+    </svg>
+  </button>
+  <span id="copyMessage" class="mx-2 text-green-500 hidden"
+    >¡Correo copiado!</span
+  >
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const emailInput = document.getElementById(
+      "emailInput"
+    ) as HTMLInputElement;
+    const copyButton = document.getElementById("copyButton");
+    const copyMessage = document.getElementById("copyMessage");
+    const emailServiceURL =
+      "https://mail.google.com/mail/?view=cm&fs=1&to=colmenareshr@gmail.com&su=Trabajemos%20juntos%20Humberto";
+
+    emailInput?.addEventListener("click", () => {
+      window.open(emailServiceURL, "_blank");
+    });
+
+    copyButton?.addEventListener("click", () => {
+      navigator.clipboard
+        .writeText(emailInput.value)
+        .then(() => {
+          copyMessage?.classList.remove("hidden");
+          setTimeout(() => {
+            copyMessage?.classList.add("hidden");
+          }, 3000);
+        })
+        .catch((err) => {
+          console.error("Error al copiar el correo: ", err);
+        });
+    });
+  });
+</script>
