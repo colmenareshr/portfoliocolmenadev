@@ -1,19 +1,21 @@
 ---
-import Contact from "./Contact.astro";
 ---
 
-<section class="w-full min-h-screen flex items-center bg-gray-900">
+<section
+  class="w-full min-h-screen flex bg-blend-overlay  items-center bg-gray-900 bg-static-noise animation-static"
+>
   <div
-    class="container mx-auto py-10 max-w-screen-lg grid md:grid-cols-2 place-items-center md:justify-items-end"
+    class="container mx-auto py-10 max-w-screen-lg grid place-items-center space-y-8"
   >
-    <div class="flex flex-col justify-center items-center md:items-start space-y-4 py-8">
+    <div
+      class="flex flex-col justify-center items-center md:items-start space-y-4 py-8 border-t border-b text-center text-3xl md:text-7xl font-extralight"
+    >
       <h1
-        class="text-center md:text-left text-3xl md:text-4xl font-bold text-slate-100 text-balance"
+        class="bg-clip-text text-transparent bg-gradient-to-r from-slate-200 to-yellow-200 text-balance"
       >
-        Soy Humberto Colmenares, Full Stack Developer y Especialista en
-        WordPress...
+        Full Stack Developer y Especialista en WordPress...
       </h1>
-      <p class="text-lg text-slate-100 text-center text-balance md:text-left">
+      <p class="text-lg text-slate-100 text-center text-balance font-normal">
         ...apasionado por crear sitios web atractivos, responsivos y fáciles de
         usar. Ayudo a
         <span class="font-bold text-yellow-200/100"
@@ -21,16 +23,15 @@ import Contact from "./Contact.astro";
         >
         a crear páginas web orientadas a la conversión y generar ventas.
       </p>
-      <Contact />
     </div>
-    <div class="flex flex-col space-y-4">
-      <img
-        src="../../public/colmenadev-logo.svg"
-        alt="Humberto Colmenares"
-        width="300"
-        height="auto"
-        class="max-w-full h-auto rounded-full"
-      />
+    <div class="flex items-center justify-center flex-wrap space-x-2 gap-3">
+      <a
+        href="#"
+        class="px-6 py-3 text-lg font-semibold text-black bg-yellow-400 border border-black rounded-full hover:bg-yellow-500 hover:border-white"
+      >
+        <span class="relative inline-block">Trabajemos juntos</span>
+      </a>
+      <button class="px-6 py-3  text-lg font-semibold text-white bg-transparent border rounded-full hover:bg-yellow-500 hover:border-black hover:text-black">Suscríbete</button>
     </div>
   </div>
 </section>
