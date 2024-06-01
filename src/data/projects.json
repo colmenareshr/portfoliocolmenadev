@@ -1,0 +1,26 @@
+[
+    {
+			"id":1,
+      "title": "Web Corporativa Oposiciones CFH",
+      "image": "../../public/project-cd-2.jpg",
+      "description": "Rediseño web para Oposiciones CFH. Transformamos un sitio obsoleto y mal diseñado en una plataforma moderna y funcional, mejorando la experiencia del usuario y la estética visual.",
+      "link": "https://avila.justmarketing.es/",
+			"category": "WordPress"
+    },
+    {
+			"id":2,
+			"title": "Tienda Online Casa Simón Granel",
+			"image": "../../public/project-cd-1.jpg",
+			"description": "Desarrollo de una tienda online con WooCommerce para Casa Simón Granel, una empresa de venta de granos en España. Implementamos un diseño atractivo y una interfaz intuitiva para facilitar las compras en línea.",
+			"link": "https://casasimongranel.com/",
+			"category": "WordPress"
+    },
+		{
+			"id":3,
+			"title": "Crossfit Bikain",
+			"image": "../../public/project-cd-3.jpg",
+			"description": "Creación de un sitio web para Crossfit Bikain, un gimnasio de crossfit. El nuevo diseño refleja la energía y el dinamismo del gimnasio, ofreciendo a los usuarios información clara y atractiva sobre las clases y servicios.",
+			"link": "https://crossfitbikain.com/",
+			"category": "WordPress"
+		}
+]
